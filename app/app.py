@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-# Hugging Face Inference API setup
+# Hugging Face Inference API 
 API_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
 HF_TOKEN = "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" 
 
@@ -30,11 +30,12 @@ def query_model(prompt):
     return generated[0]["generated_text"]
 
 def generate_chat(user_input):
+    # Chat history
     global chat_history
     chat_history.append(f"Patient: {user_input}")
-    chat_history = chat_history[-6:]  # Keep last 3 interactions
+    chat_history = chat_history[-6:] 
 
-    # Format prompt using instruction style
+    # Chatbot Prompt
     prompt = (
         "[INST] You are a helpful and medically accurate assistant specialized in Chronic Kidney Disease (CKD). "
         "Respond only with medical guidance based on CKD context. \n\n"

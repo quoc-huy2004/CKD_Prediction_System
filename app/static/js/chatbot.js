@@ -34,7 +34,7 @@ function handleUserMessage() {
   if (userMessage) {
     addMessage(userMessage, "question");
     sendMessageToHuggingFace(userMessage);
-    userInput.value = ""; // Clear input field
+    userInput.value = ""; 
   } else {
     addMessage("Please enter a message.", "message");
   }
@@ -42,7 +42,7 @@ function handleUserMessage() {
 
 async function sendMessageToHuggingFace(message) {
   const loadingElement = document.getElementById("loading");
-  loadingElement.style.display = "block";  // Show loading
+  loadingElement.style.display = "block"; 
 
   try {
       const response = await fetch("http://127.0.0.1:5000/chat", {
@@ -52,7 +52,7 @@ async function sendMessageToHuggingFace(message) {
       });
 
       const result = await response.json();
-      loadingElement.style.display = "none";  // Hide loading
+      loadingElement.style.display = "none";
 
       if (result && result.reply) {
           addMessage(result.reply, "message");
@@ -60,7 +60,7 @@ async function sendMessageToHuggingFace(message) {
           addMessage("Error: Unexpected response from AI.", "message");
       }
   } catch (error) {
-      loadingElement.style.display = "none";  // Hide loading
+      loadingElement.style.display = "none";  
       addMessage("Error connecting to AI. Please try again.", "message");
       console.error("API Error:", error);
   }
@@ -68,11 +68,11 @@ async function sendMessageToHuggingFace(message) {
 
 
 
-// Function to add messages (both user & bot)
+// Function to add messages
 function addMessage(text, type) {
   const messageElement = document.createElement("div");
   messageElement.className = type;
   messageElement.textContent = text;
   messages.appendChild(messageElement);
-  messages.scrollTop = messages.scrollHeight; // Auto-scroll to the bottom
+  messages.scrollTop = messages.scrollHeight; 
 }
