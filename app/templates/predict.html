@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CKD Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>CKD Prediction</h1>
+    <form method="POST">
+        <label for="Sex">Sex (0 for Woman, 1 for Man):</label>
+        <input type="text" id="Sex" name="Sex"><br>
+        <label for="AgeBaseline">Age:</label>
+        <input type="text" id="AgeBaseline" name="AgeBaseline"><br>
+        <label for="HistoryDiabetes">History of Diabetes (yes/no):</label>
+        <input type="text" id="HistoryDiabetes" name="HistoryDiabetes"><br>
+        <label for="HistoryCHD">History of CHD (yes/no):</label>
+        <input type="text" id="HistoryCHD" name="HistoryCHD"><br>
+        <label for="HistoryVascular">History of Vascular Disease (yes/no):</label>
+        <input type="text" id="HistoryVascular" name="HistoryVascular"><br>
+        <label for="HistorySmoking">History of Smoking (yes/no):</label>
+        <input type="text" id="HistorySmoking" name="HistorySmoking"><br>
+        <label for="HistoryHTN">History of Hypertension (yes/no):</label>
+        <input type="text" id="HistoryHTN" name="HistoryHTN"><br>
+        <label for="HistoryDLD">History of Dyslipidemia (yes/no):</label>
+        <input type="text" id="HistoryDLD" name="HistoryDLD"><br>
+        <label for="HistoryObesity">History of Obesity (yes/no):</label>
+        <input type="text" id="HistoryObesity" name="HistoryObesity"><br>
+        <label for="DLDmeds">Dyslipidemia Medications (yes/no):</label>
+        <input type="text" id="DLDmeds" name="DLDmeds"><br>
+        <label for="DMmeds">Diabetes Medications (yes/no):</label>
+        <input type="text" id="DMmeds" name="DMmeds"><br>
+        <label for="HTNmeds">Hypertension Medications (yes/no):</label>
+        <input type="text" id="HTNmeds" name="HTNmeds"><br>
+        <label for="ACEIARB">ACEI or ARB Medications (yes/no):</label>
+        <input type="text" id="ACEIARB" name="ACEIARB"><br>
+        <label for="CholesterolBaseline">Cholesterol Level:</label>
+        <input type="text" id="CholesterolBaseline" name="CholesterolBaseline"><br>
+        <label for="CreatinineBaseline">Creatinine Level:</label>
+        <input type="text" id="CreatinineBaseline" name="CreatinineBaseline"><br>
+        <label for="eGFRBaseline">eGFR:</label>
+        <input type="text" id="eGFRBaseline" name="eGFRBaseline"><br>
+        <label for="sBPBaseline">Systolic Blood Pressure:</label>
+        <input type="text" id="sBPBaseline" name="sBPBaseline"><br>
+        <label for="dBPBaseline">Diastolic Blood Pressure:</label>
+        <input type="text" id="dBPBaseline" name="dBPBaseline"><br>
+        <label for="BMIBaseline">BMI:</label>
+        <input type="text" id="BMIBaseline" name="BMIBaseline"><br>
+        <label for="TimeToEventMonths">Time to Event (Months):</label>
+        <input type="text" id="TimeToEventMonths" name="TimeToEventMonths"><br>
+        <label for="TIME_YEAR">Time Year:</label>
+        <input type="text" id="TIME_YEAR" name="TIME_YEAR"><br>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

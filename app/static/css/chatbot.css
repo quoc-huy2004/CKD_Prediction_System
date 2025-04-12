@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F4F6F9;
+    color: #2D3E50;
+    margin: 0;
+    padding: 0;
+}
+
+/* Chatbot Popup */
+#chatbot {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 380px;
+    border-radius: 18px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Chatbot Header */
+#chatbot-header {
+    background: linear-gradient(135deg, #0077B6, #023E8A);
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 16px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+#logo {
+    font-size: 24px;
+    background-color: #90E0EF;
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 12px;
+}
+
+#title h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#title p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* Chatbot Toggle Button */
+#chatbot-toggle {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    background: linear-gradient(135deg, #0077B6, #023E8A);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+#chatbot-toggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #023E8A, #0077B6);
+}
+
+/* Close Button */
+#header-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: auto;
+    transition: color 0.2s ease-in-out;
+}
+
+#header-toggle:hover {
+    color: #FFC300;
+}
+
+/* Chat Messages */
+#messages {
+    padding: 15px;
+    height: 350px;
+    overflow-y: auto;
+    background: #EFF6FC;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+/* Messages */
+.message, .question {
+    margin: 8px 0;
+    padding: 14px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 75%;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Bot Response */
+.message {
+    background: #FFFFFF;
+    color: #2D3E50;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    align-self: flex-start;
+}
+
+/* User Message */
+.question {
+    background: linear-gradient(135deg, #0077B6, #023E8A);
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* Input and Send Button */
+#chat-input {
+    display: flex;
+    padding: 10px;
+    background: #FFFFFF;
+    border-top: 1px solid #CED4DA;
+}
+
+#user-input {
+    width: 70%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid #CED4DA;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#user-input:focus {
+    border-color: #0077B6;
+    box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+#send-button {
+    width: 25%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(135deg, #0077B6, #023E8A);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#send-button:hover {
+    background: linear-gradient(135deg, #023E8A, #0077B6);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #chatbot {
+        width: 90%;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    #messages {
+        height: 50vh;
+    }
+}
+
+/* Loading Spinner */
+#loading {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 119, 182, 0.3);
+    border-top: 4px solid #0077B6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto; /* Center the spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
