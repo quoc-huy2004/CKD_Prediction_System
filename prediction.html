@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header_content">
+          <div class="logo">
+            <img
+              src="./img/ckd-letter-logo-design-on-600nw-2147345513.webp"
+              alt=""
+            />
+          </div>
+          <div class="search">
+            <div class="search_field">
+              <input
+                type="text"
+                class="form-control"
+                name="search"
+                id="search"
+                aria-describedby="helpId"
+                placeholder="Search Doctors"
+              />
+              <div class="search_icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html"><p>Home</p></a>
+              </li>
+              <li>
+                <a href="prediction.html"><p>CDK Prediction</p></a>
+              </li>
+              <li>
+                <a href="#"><p>Medical Records</p> </a>
+              </li>
+              <li>
+                <a href="#"><p>Health Management</p></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="icons">
+            <i class="fa-solid fa-bell fa-lg"></i>
+            <i class="fa-solid fa-bars fa-lg"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="form">
+        <div class="container">
+          <div class="form_title">
+            <h3>CKD Prediction System</h3>
+          </div>
+          <div class="form_fill">
+            <form id="heath-form">
+              <!-- Personal Information -->
+              <div class="personal">
+                <div class="personal_icon">
+                  <img src="./img/personal.png" alt="" />
+                </div>
+                <div class="personal_content">
+                  <fieldset>
+                    <legend class="personal_inf">Personal Information</legend>
+                    <label for="full-name">Full name:</label>
+                    <input
+                      type="text"
+                      id="full-name"
+                      name="full-name"
+                      required
+                    />
+                    <br />
+                    <br />
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required />
+                    <br />
+                    <br />
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                      <option value="">--Choose--</option>
+                      <option value="male">Nam</option>
+                      <option value="female">Nữ</option>
+                      <option value="other">Khác</option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!-- Living Habits -->
+              <div class="habits">
+                <div class="habits_icon">
+                  <img src="./img/habits.jpg" alt="" />
+                </div>
+                <div class="habits_content">
+                  <fieldset>
+                    <legend class="habit_inf">Living Habits</legend>
+                    <!-- Smoking  -->
+                    <label for="smoking">Smoking Status:</label>
+                    <select name="smoking" id="smoking" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <br />
+                    <br />
+                    <!-- Diet  -->
+                    <label for="diet">Diet:</label>
+                    <select name="diet" id="diet" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <br />
+                    <br />
+                    <!-- Diet  -->
+                    <label for="diet">Diet: </label>
+                    <br />
+                    <textarea name="diet" id="diet" rows="3"></textarea>
+                    <br /><br />
+                    <!-- Physical Activity Level -->
+                    <label for="excercise">Physical activity level:</label>
+                    <select id="exercise" name="exercise" required>
+                      <option value="">--Choose--</option>
+                      <option value="low">Low</option>
+                      <option value="moderate">Average</option>
+                      <option value="high">High</option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!-- Medical History  -->
+              <div class="history">
+                <div class="history_icon">
+                  <img src="./img/medical-history.jpg" alt="" />
+                </div>
+                <div class="history_content">
+                  <fieldset>
+                    <legend class="history_inf">Medical History</legend>
+                    <label for="diabetes">Diabetes:</label>
+                    <select id="diabetes" name="diabetes" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <br /><br />
+                    <label for="hypertension"> High blood pressure:</label>
+                    <select id="hypertension" name="hypertension" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <br /><br />
+                    <label for="heart-disease">Cardiovascular disease:</label>
+                    <select id="heart-disease" name="heart-disease" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                    <br /><br />
+                    <label for="family-history">Family history of CKD:</label>
+                    <select id="family-history" name="family-history" required>
+                      <option value="">--Choose--</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!-- Recent test results  -->
+              <div class="results">
+                <div class="results_icon">
+                  <img src="./img/results.jpg" alt="" />
+                </div>
+                <div class="results_content">
+                  <fieldset>
+                    <legend class="results_inf">Recent test results</legend>
+                    <label for="creatinine">Creatinine Level (mg/dL):</label>
+                    <input
+                      type="number"
+                      id="creatinine"
+                      name="creatinine"
+                      step="0.01"
+                      required
+                    />
+                    <br /><br />
+                    <label for="albuminuria">Albuminuria (mg/g):</label>
+                    <input
+                      type="number"
+                      id="albuminuria"
+                      name="albuminuria"
+                      step="0.01"
+                      required
+                    />
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="submit">
+            <button>Submit</button>
+          </div>
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
